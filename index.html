@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ef">
+  <meta name="description" content="Qiyue Dai — M.S. ECE student at Georgia Tech and Purdue ECE alumnus. Research in robot learning, generative models, and optimal control.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Qiyue Dai · Research & Notes">
+  <meta property="og:description" content="Exploring intelligent systems with curiosity and care. Robot learning, generative models, and optimal control.">
+  <meta property="og:url" content="https://daiqiyue.github.io/">
+  <link rel="canonical" href="https://daiqiyue.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Qiyue Dai · Research & Notes</title>
+  <style>
+    :root{--paper:#f8f5ef;--ink:#313c34;--muted:#657063;--green:#42634b;--clay:#9c5438;--line:#dcded1;--pale:#e9eddf;--serif:Georgia,'Times New Roman','Songti SC',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}::selection{background:#dfe5ce}a{color:inherit;text-decoration:none}button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--clay);outline-offset:5px}a:hover{color:var(--clay)}svg{display:block}p,h1,h2,h3{margin:0}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 96px));margin:auto}.skip{position:fixed;top:-80px;left:20px;background:var(--ink);color:white;padding:10px 20px;z-index:10}.skip:focus{top:12px}
+    .header{border-bottom:1px solid var(--line)}.nav{min-height:100px;display:flex;justify-content:space-between;align-items:center;gap:24px}.wordmark{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;letter-spacing:-.5px}.brand-leaf{width:26px;color:var(--green)}.nav-right{display:flex;align-items:center;gap:40px}.nav-links{display:flex;gap:30px;font-size:14px}.lang{border:1px solid #c8cebe;border-radius:6px;background:transparent;padding:5px 10px;min-height:36px;min-width:52px;font-size:12px;color:var(--ink)}.lang:hover{background:var(--pale)}
+    .hero{display:grid;grid-template-columns:1.45fr 1fr;gap:68px;align-items:center;padding:88px 0 72px}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--green);text-transform:uppercase;font-size:11px;font-weight:600;letter-spacing:2px}.eyebrow:before{content:'';width:7px;height:7px;border-radius:50%;background:#8a9c70}.hero h1{font-family:var(--serif);font-size:clamp(56px,7vw,86px);font-weight:400;line-height:1.1;letter-spacing:-4px;margin:17px 0 12px}.hello{color:var(--clay);font-family:var(--serif);font-style:italic;font-size:24px;margin-bottom:25px}.intro{max-width:590px;font-size:16px;line-height:1.85;color:#526052}.intro+.intro{margin-top:14px}.inline-link{border-bottom:1px solid #b5bea6}.hero-links{display:flex;gap:26px;align-items:center;margin-top:29px;font-size:13px;font-weight:500}.primary{display:inline-flex;gap:26px;align-items:center;background:var(--green);color:#fff;border-radius:5px;padding:11px 18px}.primary:hover{background:#34543d;color:#fff}.arrow{font-size:17px}.text-link{display:inline-flex;align-items:center;gap:9px}
+    .portrait{position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:center}.art-frame{background:#e9ecdf;border-radius:180px 180px 7px 7px;padding:14px 18px 0;position:relative;overflow:hidden;aspect-ratio:0.86;max-height:410px}.art-frame:after{content:'';position:absolute;inset:12px;border:1px solid #8797743d;border-radius:170px 170px 2px 2px;pointer-events:none}.art{width:100%;height:100%}.art-note{font-family:var(--serif);font-style:italic;color:#68745f;font-size:16px;text-align:center;margin-top:17px}.art-note span{color:var(--clay)}
+    .interests{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:23px 0;display:flex;align-items:center;justify-content:space-between;gap:22px}.section-label{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;font-weight:600;color:var(--muted)}.interest-list{display:flex;flex-wrap:wrap;gap:27px;font-family:var(--serif);font-size:18px}.interest-list span{display:flex;align-items:center;gap:11px}.interest-list span:before{content:'✳';font-family:var(--sans);color:#8a9b74;font-size:15px}
+    .news{padding:70px 0 28px}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:36px}.section-head h2{font-family:var(--serif);font-size:42px;font-weight:400;letter-spacing:-1.4px;line-height:1.15;margin:9px 0}.section-head p{color:var(--muted);font-size:14px}.year{font-family:var(--serif);font-size:19px;color:#6c7766;border:1px solid var(--line);border-radius:50%;padding:7px 15px;margin-bottom:8px}
+    .news-entry{display:grid;grid-template-columns:105px 1fr;gap:24px;border-top:1px solid var(--line);padding:34px 0 38px}.date{font-size:12px;color:var(--muted);padding-top:2px;letter-spacing:.3px}.date strong{display:block;font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.2;letter-spacing:-.5px;color:var(--ink);margin-bottom:4px}.entry-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}.badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:4px;background:var(--pale);color:#4e6245;font-size:10px;letter-spacing:.6px;text-transform:uppercase}.paper-id{font-size:11px;color:var(--muted)}.news-entry h3{font-family:var(--serif);font-size:25px;font-weight:400;line-height:1.35;letter-spacing:-.4px;max-width:795px}.authors{margin-top:11px;font-size:12px;color:var(--muted);line-height:1.8}.authors strong{font-weight:600;color:var(--ink);border-bottom:1px solid #afbaa3}.summary{margin-top:13px;color:#596454;font-size:14px;line-height:1.8;max-width:750px}.paper-links{display:flex;flex-wrap:wrap;align-items:center;gap:23px;margin-top:18px;font-size:12px;font-weight:600}.paper-links a{display:inline-flex;gap:7px;align-items:center}.paper-links .pdf{font-weight:400;color:var(--muted)}details{margin-top:14px}summary{cursor:pointer;list-style:none;font-size:11px;color:var(--muted);width:max-content}summary::-webkit-details-marker{display:none}summary:before{content:'+';display:inline-block;width:17px}details[open] summary:before{content:'−'}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#efeee6;border-radius:6px;padding:16px;font-size:11px;line-height:1.65;color:#52604f;max-width:100%;margin:10px 0 0}
+    .contact{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;background:#e9eddf;border:1px solid #dfe4d3;border-radius:8px;padding:40px 44px;margin:15px 0 66px;position:relative}.contact h2{font-family:var(--serif);font-weight:400;letter-spacing:-.8px;font-size:32px;line-height:1.25;margin:7px 0 12px}.contact p{font-size:14px;color:#586550;max-width:570px}.contact-links{display:flex;gap:13px;flex-direction:column;align-items:flex-end}.email{font-size:14px;border-bottom:1px solid #a1b191;padding-bottom:5px;white-space:nowrap}.github-contact{font-size:12px;color:var(--muted)}.footer{border-top:1px solid var(--line)}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:83px;font-size:11px;color:var(--muted)}.footer-sprig{display:flex;align-items:center;gap:8px}.footer-sprig svg{width:15px}.footer a{text-decoration:underline;text-underline-offset:3px}
+    html[lang="zh-CN"] .hero h1{letter-spacing:-3px}html[lang="zh-CN"] .hello{font-style:normal;font-size:22px}html[lang="zh-CN"] .intro{line-height:1.95}html[lang="zh-CN"] .contact h2{font-size:29px}html[lang="zh-CN"] .art-note{font-style:normal;font-size:14px}
+    @media(min-width:1400px){.wrap{width:1120px}.hero{padding-top:100px;padding-bottom:85px}}
+    @media(max-width:900px){.wrap{width:calc(100% - 64px)}.hero{gap:35px;padding:60px 0 50px;grid-template-columns:1.35fr .9fr}.hero h1{font-size:65px;letter-spacing:-3px}.art-frame{aspect-ratio:.75}.intro{font-size:15px}.interests{align-items:flex-start;flex-direction:column;gap:12px}.interest-list{font-size:17px;gap:23px}.contact{padding:30px;grid-template-columns:1fr}.contact-links{align-items:flex-start;flex-direction:row;gap:25px;flex-wrap:wrap}}
+    @media(max-width:600px){html{scroll-padding-top:24px}.wrap{width:calc(100% - 40px)}.nav{min-height:78px;gap:12px}.wordmark{font-size:19px;gap:7px}.brand-leaf{width:20px}.nav-right{gap:15px}.nav-links{gap:15px;font-size:12px}.nav-links .about-nav{display:none}.lang{font-size:11px;padding:4px 7px;min-width:43px}.hero{grid-template-columns:1fr;gap:32px;padding:42px 0 34px}.hero h1{font-size:66px;margin-top:15px}.hello{font-size:22px;margin-bottom:21px}.intro{font-size:15px}.hero-links{gap:22px}.portrait{width:100%;display:grid;grid-template-columns:145px 1fr;gap:23px;align-items:center}.art-frame{height:172px;aspect-ratio:auto;padding:5px 9px 0;border-radius:90px 90px 5px 5px}.art-frame:after{inset:7px}.art-note{text-align:left;max-width:180px;font-size:19px;line-height:1.5;margin:0}.interest-list{font-family:var(--sans);font-size:12px;gap:8px 16px}.interest-list span{gap:6px}.interest-list span:before{font-size:12px}.interests{padding:20px 0;gap:11px}.news{padding-top:42px}.section-head{margin-bottom:25px}.section-head h2{font-size:35px}.section-head p{font-size:12px}.year{font-size:16px}.news-entry{grid-template-columns:1fr;gap:13px;padding:26px 0 30px}.date{display:flex;gap:6px;align-items:baseline;font-size:11px}.date strong{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.3px;margin:0}.news-entry h3{font-size:23px;line-height:1.4}.summary{font-size:13px}.authors{font-size:11px}.entry-top{margin-bottom:9px}.contact{padding:27px 24px;margin:6px 0 38px;gap:22px}.contact h2{font-size:29px}.contact p{font-size:13px}.contact-links{gap:12px;flex-direction:column}.email{font-size:13px}.footer-inner{padding:22px 0;min-height:90px;align-items:flex-start;gap:12px;flex-direction:column}.footer-sprig{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{font-size:12px;background:white}.wrap{width:100%}.nav-right,.portrait,.hero-links,.contact,.footer,details{display:none}.hero{display:block;padding:25px 0}.hero h1{font-size:42px}.news{padding-top:25px}.news-entry{break-inside:avoid}.paper-links a:after{content:' (' attr(href) ')';font-size:9px}.interests{padding:12px 0}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip" data-en="Skip to content" data-zh="跳转到正文">Skip to content</a>
+  <header class="header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="wordmark" href="#main" aria-label="Qiyue Dai home"><svg class="brand-leaf" viewBox="0 0 32 34" aria-hidden="true"><path d="M8 29C9 18 18 9 25 4M12 20C3 21 2 11 3 8c7 0 13 5 9 12ZM17 14C16 3 25 2 29 3c0 7-4 13-12 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Qiyue Dai<span style="color:var(--clay)">.</span></a>
+      <div class="nav-right"><div class="nav-links"><a class="about-nav" href="#main" data-en="About" data-zh="关于我">About</a><a href="#news" data-en="News" data-zh="研究动态">News</a><a href="#contact" data-en="Contact" data-zh="联系">Contact</a></div><button class="lang" id="language-toggle" type="button" aria-label="切换到中文">中文</button></div>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <div class="eyebrow" data-en="A little about me" data-zh="关于我的一点介绍">A little about me</div>
+        <h1 id="name">Qiyue Dai</h1>
+        <p class="hello" data-en="Curiosity, with a sense of purpose." data-zh="心怀好奇，认真探索。">Curiosity, with a sense of purpose.</p>
+        <p class="intro"><span data-en="Hello, and welcome! I'm an M.S. student in Electrical and Computer Engineering at " data-zh="你好，欢迎来到我的个人主页！我目前在 ">Hello, and welcome! I'm an M.S. student in Electrical and Computer Engineering at </span><a class="inline-link" href="https://www.gatech.edu/" data-en="Georgia Tech" data-zh="佐治亚理工学院">Georgia Tech</a><span data-en=" and a Purdue ECE alumnus." data-zh=" 攻读电气与计算机工程硕士，此前毕业于普渡大学 ECE。"> and a Purdue ECE alumnus.</span></p>
+        <p class="intro" data-en="My research interests bring together robot learning, generative models, and optimal control. I explore how understanding a model's internal representations can help us steer its behavior toward greater reliability and safety." data-zh="我的研究兴趣连接机器人学习、生成式模型与最优控制。我关注如何理解模型的内部表征，并以此引导模型行为，让智能系统更可靠、更安全。">My research interests bring together robot learning, generative models, and optimal control. I explore how understanding a model's internal representations can help us steer its behavior toward greater reliability and safety.</p>
+        <div class="hero-links"><a href="#news" class="primary"><span data-en="Explore my research" data-zh="了解我的研究">Explore my research</span><span class="arrow" aria-hidden="true">↘</span></a><a class="text-link" href="https://github.com/daiqiyue">GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="portrait">
+        <div class="art-frame">
+          <svg class="art" viewBox="0 0 340 390" aria-hidden="true">
+            <circle cx="231" cy="111" r="53" fill="#dcca9e" opacity=".67"/>
+            <path d="M25 340H316" stroke="#a4b08c" stroke-width="1"/>
+            <path d="M161 295C163 245 156 209 172 163C184 128 196 104 210 79M167 258C140 238 126 219 119 195M166 212C191 202 211 181 222 158M170 171C151 158 141 138 138 114" fill="none" stroke="#657c54" stroke-width="3" stroke-linecap="round"/>
+            <path d="M119 196C84 194 80 167 84 150C111 153 126 173 119 196Z" fill="#83966b"/>
+            <path d="M146 236C117 247 94 229 89 210C114 200 139 214 146 236Z" fill="#9caa83"/>
+            <path d="M166 257C186 231 213 234 226 242C212 268 185 278 166 257Z" fill="#708561"/>
+            <path d="M167 215C143 199 138 176 145 160C168 173 179 192 167 215Z" fill="#9dac83"/>
+            <path d="M196 193C187 169 200 146 220 140C232 164 215 186 196 193Z" fill="#7b9264"/>
+            <path d="M138 117C114 114 105 92 110 76C132 77 148 94 138 117Z" fill="#a7b38c"/>
+            <path d="M173 159C173 132 150 119 135 123C134 146 151 165 173 159Z" fill="#6d8458"/>
+            <path d="M186 129C181 102 196 81 214 78C223 100 210 122 186 129Z" fill="#91a174"/>
+            <path d="M204 91C204 70 218 54 238 54C238 75 226 91 204 91Z" fill="#677f54"/>
+            <path d="M125 285H204L195 331Q194 340 184 340H145Q135 340 133 331Z" fill="#b97959"/>
+            <path d="M125 285H204V294H125Z" fill="#c68c6b"/>
+            <path d="M143 301L148 329M160 301V329M180 301L176 329" stroke="#d1a083" stroke-width="1.5" opacity=".8"/>
+            <path d="M238 318H283V337H238Z" fill="#dfcda4"/><path d="M234 311H279V318H234Z" fill="#f5f0df"/><path d="M237 308H281V312H237Z" fill="#9aa787"/><path d="M244 325H277" stroke="#bcae89"/>
+            <path d="M52 331H83V339H52Z" fill="#a5b18f"/><path d="M56 321H87V331H56Z" fill="#f4eddb"/><path d="M57 320H87" stroke="#b7bd9f"/>
+            <path d="M55 100L59 91L63 100L72 104L63 108L59 117L55 108L46 104Z" fill="#c0aa7c" opacity=".8"/>
+            <circle cx="269" cy="215" r="3" fill="#b8a67c"/><circle cx="83" cy="258" r="2" fill="#b8a67c"/>
+            <path d="M32 361C96 355 242 355 305 361" stroke="#a9b293" fill="none" stroke-dasharray="2 5"/>
+          </svg>
+        </div>
+        <p class="art-note" data-en="Good questions. Thoughtful exploration." data-zh="从一个好问题，开始一段新探索。">Good questions. Thoughtful exploration.</p>
+      </div>
+    </section>
+    <aside class="interests" aria-label="Research interests"><p class="section-label" data-en="Areas of curiosity" data-zh="关注的研究方向">Areas of curiosity</p><div class="interest-list"><span data-en="Robot learning" data-zh="机器人学习">Robot learning</span><span data-en="Generative models" data-zh="生成式模型">Generative models</span><span data-en="Optimal control" data-zh="最优控制">Optimal control</span></div></aside>
+    <section class="news" id="news" aria-labelledby="news-heading">
+      <div class="section-head"><div><p class="section-label" data-en="From the research desk" data-zh="研究手记">From the research desk</p><h2 id="news-heading" data-en="News & research" data-zh="News · 研究动态">News & research</h2><p data-en="Recent papers and ideas I've helped bring to life." data-zh="记录我参与的论文，以及研究中的新进展。">Recent papers and ideas I've helped bring to life.</p></div><span class="year">2026</span></div>
+      <article class="news-entry" aria-labelledby="paper-wam">
+        <time class="date" datetime="2026-07-16"><strong data-en="JUL 16" data-zh="7 月 16 日">JUL 16</strong><span>2026</span></time>
+        <div><div class="entry-top"><span class="badge" data-en="New preprint" data-zh="预印本发布">New preprint</span><span class="paper-id">arXiv:2607.14943</span></div>
+          <h3 id="paper-wam"><a href="https://arxiv.org/abs/2607.14943">Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control</a></h3>
+          <p class="authors">Jihoon Hong, Julian Skifstad, <strong>Qiyue Dai</strong>, Alice Chan, Glen Chou</p>
+          <p class="summary" data-en="Our preprint introduces WA-LQR, using model interpretability and feedback control to improve world action model robustness under visual and physical perturbations." data-zh="我参与的预印本提出 WA-LQR，将模型可解释性与反馈控制结合，提升世界动作模型面对视觉和物理扰动时的鲁棒性。">Our preprint introduces WA-LQR, using model interpretability and feedback control to improve world action model robustness under visual and physical perturbations.</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.14943"><span data-en="Read paper" data-zh="阅读论文">Read paper</span><span aria-hidden="true">↗</span></a><a class="pdf" href="https://arxiv.org/pdf/2607.14943">PDF <span aria-hidden="true">↓</span></a></div>
+          <details><summary data-en="BibTeX citation" data-zh="BibTeX 引用">BibTeX citation</summary><pre>@article{hong2026steering,
+  title={Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control},
+  author={Hong, Jihoon and Skifstad, Julian and Dai, Qiyue and Chan, Alice and Chou, Glen},
+  journal={arXiv preprint arXiv:2607.14943},
+  year={2026},
+  doi={10.48550/arXiv.2607.14943}
+}</pre></details>
+        </div>
+      </article>
+      <article class="news-entry" aria-labelledby="paper-video">
+        <time class="date" datetime="2026-06-03"><strong data-en="JUN 03" data-zh="6 月 3 日">JUN 03</strong><span>2026</span></time>
+        <div><div class="entry-top"><span class="badge" data-en="New preprint" data-zh="预印本发布">New preprint</span><span class="paper-id">arXiv:2606.04775</span></div>
+          <h3 id="paper-video"><a href="https://arxiv.org/abs/2606.04775">Activation Steering of Video Generation Models via Reduced-Order Linear Optimal Control</a></h3>
+          <p class="authors">Jihoon Hong, Alice Chan, <strong>Qiyue Dai</strong>, Julian Skifstad, Glen Chou</p>
+          <p class="summary" data-en="Our preprint introduces LA-LQR, a reduced-order feedback controller for steering video model activations. The approach reduces unsafe generations while preserving prompt fidelity and visual quality." data-zh="我参与的预印本提出 LA-LQR，通过降阶反馈控制引导视频模型的内部激活，在保持提示词一致性与视觉质量的同时，减少不安全内容的生成。">Our preprint introduces LA-LQR, a reduced-order feedback controller for steering video model activations. The approach reduces unsafe generations while preserving prompt fidelity and visual quality.</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2606.04775"><span data-en="Read paper" data-zh="阅读论文">Read paper</span><span aria-hidden="true">↗</span></a><a class="pdf" href="https://arxiv.org/pdf/2606.04775">PDF <span aria-hidden="true">↓</span></a></div>
+          <details><summary data-en="BibTeX citation" data-zh="BibTeX 引用">BibTeX citation</summary><pre>@article{hong2026activation,
+  title={Activation Steering of Video Generation Models via Reduced-Order Linear Optimal Control},
+  author={Hong, Jihoon and Chan, Alice and Dai, Qiyue and Skifstad, Julian and Chou, Glen},
+  journal={arXiv preprint arXiv:2606.04775},
+  year={2026},
+  doi={10.48550/arXiv.2606.04775}
+}</pre></details>
+        </div>
+      </article>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div><p class="section-label" data-en="A conversation starts here" data-zh="从一次交流开始">A conversation starts here</p><h2 id="contact-heading" data-en="Let's exchange ideas." data-zh="期待与你交流。">Let's exchange ideas.</h2><p data-en="Working on a related question, or simply curious about the research? I'd be happy to hear from you." data-zh="如果你也在探索相近的问题，或对我的研究感兴趣，欢迎联系，一起交流想法。">Working on a related question, or simply curious about the research? I'd be happy to hear from you.</p></div>
+      <div class="contact-links"><a class="email" href="mailto:qdai41@gatech.edu">qdai41@gatech.edu <span aria-hidden="true">↗</span></a><a class="github-contact" href="https://github.com/daiqiyue">github.com/daiqiyue <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p>© <span id="year">2026</span> Qiyue Dai <span aria-hidden="true">·</span> <a href="https://github.com/daiqiyue/daiqiyue.github.io" data-en="Website source" data-zh="网站源码">Website source</a></p><p class="footer-sprig"><svg viewBox="0 0 25 29" aria-hidden="true"><path d="M6 25C7 17 13 9 20 4M10 19C3 18 2 12 3 8C11 9 14 14 10 19ZM14 12C14 4 19 2 24 2C24 8 20 13 14 12Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-en="Rooted in curiosity. Growing through research." data-zh="以好奇心为起点，在探索中成长。">Rooted in curiosity. Growing through research.</span></p></div></footer>
+  <script>
+    (() => {
+      const toggle = document.getElementById('language-toggle');
+      const applyLanguage = language => {
+        const zh = language === 'zh';
+        document.documentElement.lang = zh ? 'zh-CN' : 'en';
+        document.querySelectorAll('[data-en][data-zh]').forEach(element => {
+          element.textContent = element.dataset[zh ? 'zh' : 'en'];
+        });
+        toggle.textContent = zh ? 'EN' : '中文';
+        toggle.setAttribute('aria-label', zh ? 'Switch to English' : '切换到中文');
+        document.querySelector('nav').setAttribute('aria-label', zh ? '主导航' : 'Main navigation');
+        document.querySelector('.interests').setAttribute('aria-label', zh ? '研究兴趣' : 'Research interests');
+        try { localStorage.setItem('qiyue-language', language); } catch (_) {}
+      };
+      let language = 'en';
+      try { if (localStorage.getItem('qiyue-language') === 'zh') language = 'zh'; } catch (_) {}
+      applyLanguage(language);
+      toggle.addEventListener('click', () => applyLanguage(document.documentElement.lang === 'en' ? 'zh' : 'en'));
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
