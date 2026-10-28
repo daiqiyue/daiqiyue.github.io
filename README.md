@@ -29,4 +29,4 @@ Paper metadata and summaries were checked against the original arXiv records on 
 - https://arxiv.org/abs/2607.14943 — submitted July 16, 2026.
 - https://arxiv.org/abs/2606.04775 — submitted June 3, 2026.
 
-The public academic email is listed in the papers. Both entries are presented as preprints; no conference acceptance or individual contribution beyond coauthorship is claimed.
+The public academic email is listed in the papers. Both entries are presented as preprints; no conference acceptance is claimed. Equal contribution markers follow the author annotations in the original papers: Jihoon Hong and Julian Skifstad for WA-LQR; Alice Chan and Qiyue Dai for LA-LQR.
