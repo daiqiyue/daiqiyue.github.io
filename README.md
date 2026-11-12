@@ -1,6 +1,6 @@
 # Qiyue Dai — Personal website
 
-A warm, responsive academic homepage with English/Chinese switching, a personal introduction, research interests, two paper announcements, and contact links.
+A responsive academic homepage with a dark default theme, a light theme, English and Chinese, selected publications, dated news, and contact links.
 
 Website: https://daiqiyue.github.io/
 
@@ -10,11 +10,11 @@ The website is plain HTML, CSS, and JavaScript with no build step, package insta
 
 ## Edit content
 
-- Edit `index.html` to update the introduction, contact information, and News.
-- Bilingual text uses `data-en` and `data-zh`. Update both attributes and the initial English text.
-- Add news by copying an `article.news-entry`, updating the title, author list, ISO date, links, short summary, and BibTeX. Keep entries newest first.
-- Styling is in the `<style>` block. The main colors are defined in `:root`.
-- The botanical illustration is original inline SVG. The favicon is in `assets/`.
+- Edit `index.html` for the biography, publications, News, and contact information. Translate content using the existing `data-en` and `data-zh` attributes.
+- Each publication has an author list with contribution notes, a figure, a summary, links, and BibTeX. Keep each paper's stable anchor when updating News.
+- Layout and colors are in `assets/site.css`. Language and theme preferences, figure enlargement, and publication detail controls are in `assets/site.js`.
+- The profile picture is the [public GitHub avatar](https://github.com/daiqiyue).
+- The WA-LQR thumbnail is [Figure 1](https://arxiv.org/html/2607.14943v1/teaser.png) by Hong, Skifstad, Dai, Chan, and Chou. The LA-LQR thumbnail is a crop of the method diagram in [Figure 1](https://arxiv.org/html/2606.04775v1/front_fig_v2.png) by Hong, Chan, Dai, Skifstad, and Chou. Both images are resized and encoded as WebP under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Local preview
 
