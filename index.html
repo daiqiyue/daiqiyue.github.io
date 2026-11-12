@@ -12,17 +12,16 @@
   <link rel="canonical" href="https://daiqiyue.github.io/">
   <link rel="icon" type="image/webp" href="assets/profile.webp">
   <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/site.js" defer></script>
+  <script src="assets/site.js?v=2" defer></script>
   <title>Qiyue Dai · Academic homepage</title>
 </head>
 <body>
-  <a class="skip" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <nav class="container" aria-label="Main navigation">
-      <a href="#about" data-en="about" data-zh="关于我">about</a>
-      <a href="#publications" data-en="publications" data-zh="论文">publications</a>
-      <a href="#news" data-en="news" data-zh="动态">news</a>
-      <button type="button" id="language-toggle" aria-label="切换到中文">中文</button>
+      <a href="#about">about</a>
+      <a href="#publications">publications</a>
+      <a href="#news">news</a>
       <button type="button" id="theme-toggle" aria-label="Switch to light theme" title="Switch to light theme"><span aria-hidden="true">☼</span></button>
     </nav>
   </header>
@@ -35,10 +34,10 @@
         </a>
         <div class="bio">
           <p>
-            <span data-en="Hello! I’m a master’s student in Electrical and Computer Engineering at the " data-zh="你好！我目前在">Hello! I’m a master’s student in Electrical and Computer Engineering at the </span><a href="https://www.gatech.edu/" data-en="Georgia Institute of Technology" data-zh="佐治亚理工学院">Georgia Institute of Technology</a><span data-en=". I previously studied Electrical and Computer Engineering at " data-zh="攻读电气与计算机工程硕士，此前毕业于">. I previously studied Electrical and Computer Engineering at </span><a href="https://www.purdue.edu/" data-en="Purdue University" data-zh="普渡大学">Purdue University</a><span data-en="." data-zh="电气与计算机工程专业。">.</span>
+            Hello! I’m a master’s student in Electrical and Computer Engineering at the <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>. I previously studied Electrical and Computer Engineering at <a href="https://www.purdue.edu/">Purdue University</a>.
           </p>
-          <p data-en="My research interests are robot learning and generative modeling." data-zh="我的研究兴趣是机器人学习与生成式建模。">My research interests are robot learning and generative modeling.</p>
-          <p><span data-en="My recent work studies how models respond when a robot’s camera view changes, and how to guide what a video model generates. You can read more in my " data-zh="我近期参与的研究关注两个问题：机器人相机视角变化时，模型会如何反应？视频生成过程中，怎样引导模型生成期望的内容？相关工作见下方的">My recent work studies how models respond when a robot’s camera view changes, and how to guide what a video model generates. You can read more in my </span><a href="#publications" data-en="selected publications" data-zh="精选论文">selected publications</a><span data-en="." data-zh="。">.</span></p>
+          <p>My research interests are robot learning and generative modeling.</p>
+          <p>My recent work studies how models respond when a robot’s camera view changes, and how to guide what a video model generates. You can read more in my <a href="#publications">selected publications</a>.</p>
           <div class="contact-links" id="contact">
             <a href="mailto:qdai41@gatech.edu">qdai41@gatech.edu</a>
             <span aria-hidden="true">/</span>
@@ -49,7 +48,7 @@
       </div>
     </section>
     <section id="publications" aria-labelledby="publication-heading">
-      <h2 id="publication-heading" data-en="selected publications" data-zh="精选论文">selected publications</h2>
+      <h2 id="publication-heading">selected publications</h2>
       <article class="publication" aria-labelledby="paper-wam">
         <div class="paper-media">
           <span class="venue-tag">arXiv 2026</span>
@@ -60,15 +59,15 @@
         <div class="paper-info">
           <h3 id="paper-wam"><a href="https://arxiv.org/abs/2607.14943">Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control</a></h3>
           <p class="authors"><a href="https://arxiv.org/search/?searchtype=author&amp;query=Hong%2C+Jihoon">Jihoon Hong</a><sup aria-describedby="wam-equal-contribution">*</sup>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Skifstad%2C+Julian">Julian Skifstad</a><sup aria-describedby="wam-equal-contribution">*</sup>, <strong>Qiyue Dai</strong>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Chan%2C+Alice">Alice Chan</a>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Chou%2C+Glen">Glen Chou</a></p>
-          <p class="equal-note" id="wam-equal-contribution"><span data-en="* Equal contribution" data-zh="* 共同贡献">* Equal contribution</span></p>
-          <p class="publication-date"><span data-en="arXiv preprint · July 2026" data-zh="arXiv 预印本 · 2026 年 7 月">arXiv preprint · July 2026</span></p>
+          <p class="equal-note" id="wam-equal-contribution">* Equal contribution</p>
+          <p class="publication-date">arXiv preprint · July 2026</p>
           <div class="resources">
-            <button type="button" data-panel="wam-summary" aria-expanded="false" aria-controls="wam-summary"><span data-en="Summary" data-zh="简介">Summary</span></button>
+            <button type="button" data-panel="wam-summary" aria-expanded="false" aria-controls="wam-summary">Summary</button>
             <a href="https://arxiv.org/abs/2607.14943">arXiv</a>
             <a href="https://arxiv.org/pdf/2607.14943">PDF</a>
             <button type="button" data-panel="wam-bib" aria-expanded="false" aria-controls="wam-bib">BibTeX</button>
           </div>
-          <div class="paper-panel" id="wam-summary" hidden><p><span data-en="We used the internal activations of world action models to study why changes in the camera view or gripper position can disrupt robot manipulation. WA-LQR uses feedback during inference to improve robustness in two of the models we tested." data-zh="我们分析了世界动作模型的内部激活，研究相机视角和夹爪位置变化为何会干扰机器人操作。WA-LQR 在推理过程中引入反馈，改善了实验中两种模型面对扰动时的表现。">We used the internal activations of world action models to study why changes in the camera view or gripper position can disrupt robot manipulation. WA-LQR uses feedback during inference to improve robustness in two of the models we tested.</span></p></div>
+          <div class="paper-panel" id="wam-summary" hidden><p>We used the internal activations of world action models to study why changes in the camera view or gripper position can disrupt robot manipulation. WA-LQR uses feedback during inference to improve robustness in two of the models we tested.</p></div>
           <div class="paper-panel" id="wam-bib" hidden><pre>@article{hong2026steering,
   title={Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control},
   author={Hong, Jihoon and Skifstad, Julian and Dai, Qiyue and Chan, Alice and Chou, Glen},
@@ -88,15 +87,15 @@
         <div class="paper-info">
           <h3 id="paper-video"><a href="https://arxiv.org/abs/2606.04775">Activation Steering of Video Generation Models via Reduced-Order Linear Optimal Control</a></h3>
           <p class="authors"><a href="https://arxiv.org/search/?searchtype=author&amp;query=Hong%2C+Jihoon">Jihoon Hong</a>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Chan%2C+Alice">Alice Chan</a><sup aria-describedby="video-equal-contribution">*</sup>, <strong>Qiyue Dai</strong><sup aria-describedby="video-equal-contribution">*</sup>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Skifstad%2C+Julian">Julian Skifstad</a>, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Chou%2C+Glen">Glen Chou</a></p>
-          <p class="equal-note" id="video-equal-contribution"><span data-en="* Equal contribution" data-zh="* 共同贡献">* Equal contribution</span></p>
-          <p class="publication-date"><span data-en="arXiv preprint · June 2026" data-zh="arXiv 预印本 · 2026 年 6 月">arXiv preprint · June 2026</span></p>
+          <p class="equal-note" id="video-equal-contribution">* Equal contribution</p>
+          <p class="publication-date">arXiv preprint · June 2026</p>
           <div class="resources">
-            <button type="button" data-panel="video-summary" aria-expanded="false" aria-controls="video-summary"><span data-en="Summary" data-zh="简介">Summary</span></button>
+            <button type="button" data-panel="video-summary" aria-expanded="false" aria-controls="video-summary">Summary</button>
             <a href="https://arxiv.org/abs/2606.04775">arXiv</a>
             <a href="https://arxiv.org/pdf/2606.04775">PDF</a>
             <button type="button" data-panel="video-bib" aria-expanded="false" aria-controls="video-bib">BibTeX</button>
           </div>
-          <div class="paper-panel" id="video-summary" hidden><p><span data-en="LA-LQR adjusts a video model’s internal activations as it generates a clip. In our evaluations, these feedback adjustments reduced unsafe outputs while preserving visual quality and alignment with the prompt." data-zh="LA-LQR 在视频生成过程中调整模型的内部激活。在我们的实验中，这种反馈调整减少了不安全的输出，同时维持了视觉质量和内容与提示词的一致性。">LA-LQR adjusts a video model’s internal activations as it generates a clip. In our evaluations, these feedback adjustments reduced unsafe outputs while preserving visual quality and alignment with the prompt.</span></p></div>
+          <div class="paper-panel" id="video-summary" hidden><p>LA-LQR adjusts a video model’s internal activations as it generates a clip. In our evaluations, these feedback adjustments reduced unsafe outputs while preserving visual quality and alignment with the prompt.</p></div>
           <div class="paper-panel" id="video-bib" hidden><pre>@article{hong2026activation,
   title={Activation Steering of Video Generation Models via Reduced-Order Linear Optimal Control},
   author={Hong, Jihoon and Chan, Alice and Dai, Qiyue and Skifstad, Julian and Chou, Glen},
@@ -108,20 +107,20 @@
       </article>
     </section>
     <section id="news" aria-labelledby="news-heading">
-      <h2 id="news-heading" data-en="news" data-zh="研究动态">news</h2>
+      <h2 id="news-heading">news</h2>
       <ul class="news-list">
-        <li><time datetime="2026-07-16" data-en="Jul 16, 2026" data-zh="2026 年 7 月 16 日">Jul 16, 2026</time><p><a href="#paper-wam" data-en="Our WA-LQR preprint" data-zh="我们关于 WA-LQR 的预印本">Our WA-LQR preprint</a><span data-en=" on improving world action model robustness is now on arXiv." data-zh="已上线 arXiv，研究如何提高世界动作模型面对扰动时的鲁棒性。"> on improving world action model robustness is now on arXiv.</span></p></li>
-        <li><time datetime="2026-06-03" data-en="Jun 3, 2026" data-zh="2026 年 6 月 3 日">Jun 3, 2026</time><p><a href="#paper-video" data-en="Our LA-LQR preprint" data-zh="我们关于 LA-LQR 的预印本">Our LA-LQR preprint</a><span data-en=" on steering video generation models is now on arXiv." data-zh="已上线 arXiv，研究如何在生成过程中引导视频模型。"> on steering video generation models is now on arXiv.</span></p></li>
+        <li><time datetime="2026-07-16">Jul 16, 2026</time><p><a href="#paper-wam">Our WA-LQR preprint</a> on improving world action model robustness is now on arXiv.</p></li>
+        <li><time datetime="2026-06-03">Jun 3, 2026</time><p><a href="#paper-video">Our LA-LQR preprint</a> on steering video generation models is now on arXiv.</p></li>
       </ul>
     </section>
   </main>
-  <footer><div class="container"><span>© 2026 Qiyue Dai</span><a href="https://github.com/daiqiyue/daiqiyue.github.io" data-en="Website source" data-zh="网站源码">Website source</a></div></footer>
+  <footer><div class="container"><span>© 2026 Qiyue Dai</span><a href="https://github.com/daiqiyue/daiqiyue.github.io">Website source</a></div></footer>
   <dialog id="wam-figure" aria-labelledby="wam-caption">
     <button class="close-dialog" type="button" aria-label="Close figure">×</button>
     <figure>
       <img src="assets/wa-lqr.webp" alt="Robot manipulation trials showing gripper, camera, and visual noise perturbations.">
       <figcaption id="wam-caption">
-        <span data-en="Figure 1. Robot manipulation under three types of perturbation." data-zh="图 1。三种扰动条件下的机器人操作实验。">Figure 1. Robot manipulation under three types of perturbation.</span>
+        Figure 1. Robot manipulation under three types of perturbation.
         <a href="https://arxiv.org/html/2607.14943v1">WA-LQR · Hong et al.</a>
         <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
       </figcaption>
@@ -132,7 +131,7 @@
     <figure>
       <img src="assets/la-lqr.webp" alt="Method diagram showing feedback in the reduced latent space of a video generation model.">
       <figcaption id="video-caption">
-        <span data-en="Figure 1, detail. Feedback during video generation." data-zh="图 1 局部。视频生成过程中的反馈机制。">Figure 1, detail. Feedback during video generation.</span>
+        Figure 1, detail. Feedback during video generation.
         <a href="https://arxiv.org/html/2606.04775v1">LA-LQR · Hong et al.</a>
         <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
       </figcaption>

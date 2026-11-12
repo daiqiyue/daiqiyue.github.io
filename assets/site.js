@@ -1,5 +1,4 @@
 const page = document.documentElement;
-const languageToggle = document.getElementById('language-toggle');
 const themeToggle = document.getElementById('theme-toggle');
 
 function readPreference(key) {
@@ -20,10 +19,7 @@ function remember(key, value) {
 
 function updateThemeLabel() {
   const dark = page.dataset.theme === 'dark';
-  const chinese = page.lang === 'zh-CN';
-  const label = dark
-    ? (chinese ? '切换到浅色主题' : 'Switch to light theme')
-    : (chinese ? '切换到深色主题' : 'Switch to dark theme');
+  const label = dark ? 'Switch to light theme' : 'Switch to dark theme';
   themeToggle.setAttribute('aria-label', label);
   themeToggle.title = label;
   themeToggle.firstElementChild.textContent = dark ? '☼' : '☾';
@@ -35,28 +31,7 @@ function setTheme(theme) {
   updateThemeLabel();
 }
 
-function setLanguage(language) {
-  const chinese = language === 'zh';
-  page.lang = chinese ? 'zh-CN' : 'en';
-  for (const element of document.querySelectorAll('[data-en][data-zh]')) {
-    element.textContent = element.dataset[language];
-  }
-  languageToggle.textContent = chinese ? 'EN' : '中文';
-  languageToggle.setAttribute('aria-label', chinese ? 'Switch to English' : '切换到中文');
-  document.querySelector('nav').setAttribute('aria-label', chinese ? '主导航' : 'Main navigation');
-  for (const closeButton of document.querySelectorAll('.close-dialog')) {
-    closeButton.setAttribute('aria-label', chinese ? '关闭图片' : 'Close figure');
-  }
-  updateThemeLabel();
-}
-
-setLanguage(readPreference('qiyue-language') === 'zh' ? 'zh' : 'en');
 setTheme(readPreference('qiyue-theme') === 'light' ? 'light' : 'dark');
-languageToggle.addEventListener('click', () => {
-  const language = page.lang === 'en' ? 'zh' : 'en';
-  setLanguage(language);
-  remember('qiyue-language', language);
-});
 themeToggle.addEventListener('click', () => {
   const theme = page.dataset.theme === 'dark' ? 'light' : 'dark';
   setTheme(theme);
